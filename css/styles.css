@@ -194,6 +194,8 @@ a.logo {
     color: var(--white-textcolor);
 }
 
+
+
 .jumbotron-button { 
     display: block;
     width: 200px;
@@ -214,10 +216,157 @@ a.logo {
 .jumbotron-button:focus {
     background-color: #188ce8;
     color: var(--white-textcolor);   
+    cursor: pointer;
+    transition: transform 250ms var(--timing-function);
+    outline: none;
 }
 
 .jumbotron-button {
     color: var(--white-textcolor);
+    border-color: transparent;
+}
+
+.jumbotron-wrapper .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.modal-heading {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center; 
+}
+
+.form-field {
+    position: relative; 
+    width: 448px;
+    height: 40px;
+    margin-bottom: 28px;
+}
+
+.form-label {
+    position: absolute;
+    top: 41px;
+    left: 42px;
+
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #757575;
+
+    transition: transform 250ms var(--timing-function);
+}
+
+.form-input {
+    width: 100%;
+    height: 100%;
+    left: 40px;
+    top: 40px; 
+    margin-top: 28px;
+    padding-left: 41px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+}
+
+.form-input:focus + .form-label, 
+.form-input:not(:placeholder-shown) + .form-label {
+    color: #2196F3;
+    top: 10px;
+    left: 20px;
+}
+
+.form-input:focus,
+.form-inout.form-input:not(:placeholder-shown) {
+    border: 1px solid #2196F3;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 8px;
+    padding-right: 8px;
+
+    width: 38px;
+    height: 38px; 
+}
+
+.user-comment {
+    resize: none;
+    margin-top: 28px;
+    width: 448px;
+    height: 120px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.form .form-agreement {
+    position: absolute;
+    bottom: 120px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #757575;
+}
+
+.contract {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.submit {
+    position: absolute;
+    bottom: 44px;
+    left: 165px;
+    right: 163px;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+
+    width: 200px;
+    height: 50px;
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent; 
+    cursor: pointer;
+    transition: transform 250ms var(--timing-function);
+}
+
+.submit:focus {
+    outline: none;
 }
 
 /* Преимущества*/

@@ -45,14 +45,52 @@
     <section class="jumbotron">
       <div class="jumbotron-wrapper">
         <h1 class="jumbotron-title">Эффективные решения <br /> для вашего бизнеса</h1>
-        <a href="/" class="jumbotron-button">Заказать услугу</a>
+        <button type="button" class="jumbotron-button" data-modal-open>Заказать услугу</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+
+            <p class="modal-heading">Оставьте свои данные, мы вам перезвоним</p>
+            <svg class="close-button" data-modal-close>
+              <use href="./images/symbol-modal.svg#close-button"></use>
+            </svg>
+
+            <form class="form">
+              <div class="form-field">
+                <input type="text" class="form-input" name="name" id="name" placeholder=" " />
+                <label for="name" class="form-label">Имя</label>
+              </div>
+
+              <div class="form-field">
+                <input type="tel" class="form-input" name="tel" id="tel" placeholder=" " />
+                <label for="tel" class="form-label">Телефон</label>
+              </div>
+
+              <div class="form-field">
+                <input type="email" class="form-input" name="email" id="email" placeholder=" " />
+                <label for="email" class="form-label">Почта</label>
+              </div>
+
+              <div class="form-field">
+                <textarea class="user-comment" name="comment" id="comment" placeholder=" "></textarea>
+                <label for="comment" class="form-label comment">Комментарий</label>
+              </div>
+
+              <div class="form-agreement">
+                <input type="checkbox" name="arrangement" id="arrangement" />
+                <label for="arrangement">Соглашаюсь с рассылкой и принимаю
+                  <a class="contract" href="/">Условия договора</a>
+                </label>
+              </div>
+              <button type="submit" class="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
       </div>
+
     </section>
 
     <!-- Преимущества -->
     <section class="advantages">
-      <!--скроем <h2>Преимущества</h2> в css-->
-      <!-- позже используем встроенные svg файлы -->
       <ul class="advantages-list">
         <li class="pref item-details">
           <h3>Внимание к деталям</h3>
@@ -316,6 +354,7 @@
 
     <p class="page-authors">2020 | Developed by GoIT Students</p>
   </footer>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
