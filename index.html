@@ -285,7 +285,6 @@
     <!-- Клиенты -->
     <section class="clients">
       <h2 class="clients-title">Постоянные клиенты</h2>
-      <!-- позже используем встроенные svg файлы -->
       <div class="clients-list">
         <a href="/">
           <svg class="icon-client">
@@ -357,7 +356,14 @@
 
       <div class="mail-out">
         <p>Подпишитесь на рассылку</p>
-        <!--позже вставим email-input; button-->
+        <form id="subscribe-form" method="post" action="/">
+          <input class="user-email" type="text" placeholder="E-mail" name="email">
+          <button class="submit-button" type="submit">Подписаться
+            <svg class="icon-send">
+              <use href="./images/footer-sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
 
